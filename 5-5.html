@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando a Lógica 5.5</title>
+</head>
+<body>
+  <!-- Exercício 1 -->
+   
+<script>
+function mostrarBoasVindas() {
+  alert("Bem-vindo ao nosso programa!");
+  console.log("Bem-vindo ao nosso programa!");
+}
+mostrarBoasVindas();
+</script>
+
+<!-- Exercício 2 -->
+
+<script>
+function saudarUsuario(nome) {
+  alert(`Olá, ${nome}! Tenha um bom dia!`);
+  console.log(`Olá, ${nome}! Tenha um bom dia!`);
+}
+const nome2 = prompt("Digite seu nome:");
+saudarUsuario(nome2);
+</script>
+
+<!-- Exercício 3 -->
+
+<script>
+function calcularDobro(num) {
+  return num * 2;
+}
+const numero3 = Number(prompt("Digite um número:"));
+alert("O dobro é: " + calcularDobro(numero3));
+console.log("O dobro é:", calcularDobro(numero3));
+</script>
+
+<!-- Exercício 4 -->
+
+<script>
+function calcularMedia(n1, n2, n3) {
+  return (n1 + n2 + n3) / 3;
+}
+const n1_4 = Number(prompt("Digite a primeira nota:"));
+const n2_4 = Number(prompt("Digite a segunda nota:"));
+const n3_4 = Number(prompt("Digite a terceira nota:"));
+alert("Média: " + calcularMedia(n1_4, n2_4, n3_4).toFixed(2));
+console.log("Média:", calcularMedia(n1_4, n2_4, n3_4).toFixed(2));
+</script>
+
+<!-- Exercício 5 -->
+
+<script>
+function verificarParidade(num) {
+  if (num % 2 === 0) {
+    alert("Par");
+    console.log("Par");
+  } else {
+    alert("Ímpar");
+    console.log("Ímpar");
+  }
+}
+const numero5 = Number(prompt("Digite um número:"));
+verificarParidade(numero5);
+</script>
+
+<!-- Exercício 6 -->
+
+<script>
+function encontrarMaior(a, b) {
+  return a > b ? a : b;
+}
+const num1_6 = Number(prompt("Digite o primeiro número:"));
+const num2_6 = Number(prompt("Digite o segundo número:"));
+alert("O maior é: " + encontrarMaior(num1_6, num2_6));
+console.log("O maior é:", encontrarMaior(num1_6, num2_6));
+</script>
+
+<!-- Exercício 7 -->
+ 
+<script>
+function mostrarTabuada(num) {
+  let resultado = "";
+  for (let i = 1; i <= 10; i++) {
+    resultado += `${num} x ${i} = ${num*i}\n`;
+  }
+  alert(resultado);
+  console.log(resultado);
+}
+const numero7 = Number(prompt("Digite um número para ver a tabuada:"));
+mostrarTabuada(numero7);
+</script>
+
+<!-- Exercício 8 -->
+
+<script>
+function contagemRegressiva(inicio) {
+  let resultado = "";
+  for (let i = inicio; i >= 0; i--) {
+    resultado += i + "\n";
+  }
+  alert(resultado);
+  console.log(resultado);
+}
+const inicio8 = Number(prompt("Digite o número inicial da contagem regressiva:"));
+contagemRegressiva(inicio8);
+</script>
+
+<!-- Exercício 9 -->
+
+<script>
+function somarVetor(vetor) {
+  return vetor.reduce((soma, num) => soma + num, 0);
+}
+const vetor9 = [];
+for (let i = 0; i < 5; i++) {
+  vetor9[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+alert("Soma dos elementos: " + somarVetor(vetor9));
+console.log("Soma dos elementos:", somarVetor(vetor9));
+</script>
+
+<!-- Exercício 10 -->
+
+<script>
+function encontrarMenor(vetor) {
+  return Math.min(...vetor);
+}
+const vetor10 = [];
+for (let i = 0; i < 5; i++) {
+  vetor10[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+alert("Menor valor: " + encontrarMenor(vetor10));
+console.log("Menor valor:", encontrarMenor(vetor10));
+</script>
+
+<!-- Exercício 11 -->
+ 
+function contarPares(vetor) {
+  return vetor.filter(num => num % 2 === 0).length;
+}
+const vetor11 = [];
+for (let i = 0; i < 6; i++) {
+  vetor11[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+alert("Quantidade de números pares: " + contarPares(vetor11));
+console.log("Quantidade de números pares:", contarPares(vetor11));
+</script>
+
+<!-- Exercício 12 -->
+
+<script>
+function verificarAprovacao(media) {
+  return media >= 7 ? "Aprovado" : "Reprovado";
+}
+const media12 = Number(prompt("Digite a média do aluno:"));
+alert("Situação: " + verificarAprovacao(media12));
+console.log("Situação:", verificarAprovacao(media12));
+</script>
+
+<!-- Exercício 13 -->
+
+<script>
+function calculadora(a, b, operacao) {
+  switch (operacao) {
+    case '+': return a + b;
+    case '-': return a - b;
+    case '*': return a * b;
+    case '/': return a / b;
+    default: return "Operação inválida";
+  }
+}
+const n1_13 = Number(prompt("Digite o primeiro número:"));
+const n2_13 = Number(prompt("Digite o segundo número:"));
+const op13 = prompt("Digite a operação (+ - * /):");
+alert("Resultado: " + calculadora(n1_13, n2_13, op13));
+console.log("Resultado:", calculadora(n1_13, n2_13, op13));
+</script>
+
+<!-- Exercício 14 -->
+
+<script>
+function limparTela() {
+  let resultado = "";
+  for (let i = 0; i < 50; i++) {
+    resultado += "\n";
+  }
+  console.clear();
+  alert("Tela limpa!");
+  console.log(resultado);
+}
+limparTela();
+</script>
+
+<!-- Exercício 15 -->
+
+<script>
+const somar = (a,b) => a+b;
+const subtrair = (a,b) => a-b;
+const multiplicar = (a,b) => a*b;
+const dividir = (a,b) => b!==0 ? a/b : "Erro: divisão por zero";
+
+function menuCalculadora(){
+  let sair = false;
+  while(!sair){
+    const escolha = prompt("Escolha a operação:\n1-Somar\n2-Subtrair\n3-Multiplicar\n4-Dividir\n5-Sair");
+    if(escolha==="5"){ sair=true; break; }
+    const a = Number(prompt("Digite o primeiro número:"));
+    const b = Number(prompt("Digite o segundo número:"));
+    let resultado;
+    switch(escolha){
+      case "1": resultado = somar(a,b); break;
+      case "2": resultado = subtrair(a,b); break;
+      case "3": resultado = multiplicar(a,b); break;
+      case "4": resultado = dividir(a,b); break;
+      default: resultado="Opção inválida"; break;
+    }
+    alert("Resultado: " + resultado);
+    console.log("Resultado:", resultado);
+  }
+}
+menuCalculadora();
+</script>
+
+</body>
+</html>

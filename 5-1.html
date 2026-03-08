@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title> Praticando a Lógica 5.1</title>
+</head>
+
+<body>
+
+    <!-- Exercício 1 -->
+
+    <script>
+        console.log("Olá, Mundo!");
+    </script>
+
+    <!-- Exercício 2 -->
+
+    <script>
+        const nome = prompt("Digite seu nome:");
+        const sobrenome = prompt("Digite seu sobrenome:");
+        const nomeCompleto = `${nome} ${sobrenome}`;
+        console.log("Nome completo:", nomeCompleto);
+        alert("Nome completo: " + nomeCompleto);
+    </script>
+
+    <!-- Exercício 3 -->
+
+    <script>
+        const n1 = Number(prompt("Digite o primeiro número:"));
+        const n2 = Number(prompt("Digite o segundo número:"));
+        const soma = n1 + n2;
+        console.log("A soma é:", soma);
+        alert("A soma é: " + soma);
+    </script>
+
+    <!-- Exercício 4 -->
+
+    <script>
+        const nota1 = Number(prompt("Digite a primeira nota:"));
+        const nota2 = Number(prompt("Digite a segunda nota:"));
+        const nota3 = Number(prompt("Digite a terceira nota:"));
+        const media = (nota1 + nota2 + nota3) / 3;
+        console.log("A média é:", media);
+        alert("A média é: " + media);
+    </script>
+
+    <!-- Exercício 5 -->
+
+    <script>
+        const numero5 = Number(prompt("Digite um número:"));
+        const antecessor = numero5 - 1;
+        const sucessor = numero5 + 1;
+        console.log("Antecessor:", antecessor);
+        console.log("Sucessor:", sucessor);
+        alert(`Antecessor: ${antecessor} | Sucessor: ${sucessor}`);
+    </script>
+
+    <!-- Exercício 6 -->
+
+    <script>
+        const salario = Number(prompt("Digite o salário:"));
+        const novoSalario = salario * 1.15;
+        console.log("Novo salário:", novoSalario);
+        alert("Novo salário: R$ " + novoSalario.toFixed(2));
+    </script>
+
+    <!-- Exercício 7 -->
+
+    <script>
+        const reais = Number(prompt("Digite o valor em reais:"));
+        const dolares = reais / 5;
+        console.log("Valor em dólares:", dolares);
+        alert("Valor em dólares: $ " + dolares.toFixed(2));
+    </script>
+
+    <!-- Exercício 8 -->
+
+    <script>
+        const numero8 = Number(prompt("Digite um número:"));
+        if (numero8 % 2 === 0) {
+            console.log("O número é PAR");
+            alert("O número é PAR");
+        } else {
+            console.log("O número é ÍMPAR");
+            alert("O número é ÍMPAR");
+        }
+    </script>
+
+    <!-- Exercício 9 -->
+
+    <script>
+        const idade9 = Number(prompt("Digite sua idade:"));
+        if (idade9 >= 18) {
+            console.log("Maior de idade");
+            alert("Maior de idade");
+        } else {
+            console.log("Menor de idade");
+            alert("Menor de idade");
+        }
+    </script>
+
+    <!-- Exercício 10 -->
+    <script>
+        const num1Ex10 = Number(prompt("Digite o primeiro número:"));
+        const num2Ex10 = Number(prompt("Digite o segundo número:"));
+        if (num1Ex10 > num2Ex10) {
+            alert(`O maior é: ${num1Ex10}`);
+        } else if (num2Ex10 > num1Ex10) {
+            alert(`O maior é: ${num2Ex10}`);
+        } else {
+            alert("Os números são iguais");
+        }
+    </script>
+
+    <!-- Exercício 11 -->
+
+    <script>
+        const notaA = Number(prompt("Digite a primeira nota:"));
+        const notaB = Number(prompt("Digite a segunda nota:"));
+        const mediaFinal = (notaA + notaB) / 2;
+        if (mediaFinal >= 7) {
+            alert("Aprovado");
+        } else {
+            alert("Reprovado");
+        }
+    </script>
+
+    <!-- Exercício 12 -->
+
+    <script>
+        const numero12 = Number(prompt("Digite um número:"));
+        if (numero12 > 0) {
+            alert("Positivo");
+        } else if (numero12 < 0) {
+            alert("Negativo");
+        } else {
+            alert("Zero");
+        }
+    </script>
+
+    <!-- Exercício 13 -->
+
+    <script>
+        const idade13 = Number(prompt("Digite a idade do nadador:"));
+        if (idade13 >= 5 && idade13 <= 7) {
+            alert("Infantil A");
+        } else if (idade13 <= 11) {
+            alert("Infantil B");
+        } else if (idade13 <= 13) {
+            alert("Juvenil A");
+        } else if (idade13 <= 17) {
+            alert("Juvenil B");
+        } else {
+            alert("Adulto");
+        }
+    </script>
+
+    <!-- Exercício 14 -->
+
+    <script>
+        const usuario = prompt("Digite o usuário:");
+        const senha = prompt("Digite a senha:");
+        if (usuario === "admin" && senha === "1234") {
+            alert("Login efetuado com sucesso");
+        } else {
+            alert("Falha na autenticação");
+        }
+    </script>
+
+    <!-- Exercício 15 -->
+
+    <script>
+        const peso = Number(prompt("Digite seu peso (kg):"));
+        const altura = Number(prompt("Digite sua altura (m):"));
+        const imc = peso / (altura * altura);
+        console.log("IMC:", imc);
+        alert("Seu IMC é: " + imc.toFixed(2));
+    </script>
+
+</body>
+
+</html>

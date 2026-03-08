@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Com Lógica De Programação</title>
+</head>
+<body>
+   
+    <script>
+alert('Boas-vindas à calculadora!');
+
+let dentroDaCalculadora = true;
+
+// Funções da calculadora
+function selecionarOpcao() {
+  return prompt(`
+    1 - Somar números
+    2 - Subtrair dois números
+    3 - Soma de porcentagem
+    4 - Multiplicação de dois números
+    5 - Divisão de dois números
+    6 - Sair
+  `);
+}
+
+function somarNumeros() {
+  const quantidadeDeNumeros = Number(prompt('Digite quantos números você deseja somar:'));
+  let somaTotal = 0;
+  for (let i = 0; i < quantidadeDeNumeros; i++) {
+    const numeroSoma = Number(prompt(`Digite o ${i + 1}º número:`));
+    somaTotal += numeroSoma;
+  }
+  return somaTotal;
+}
+
+function subtrairDoisNumeros(numero1, numero2) {
+  return numero1 - numero2;
+}
+
+function somarPorcentagem(valor, porcentagem) {
+  return valor + (valor * (porcentagem / 100));
+}
+
+function multiplicarDoisNumeros(numero1, numero2) {
+  return numero1 * numero2;
+}
+
+function dividirDoisNumeros(numero1, numero2) {
+  if (numero2 === 0) return 'Erro: divisão por zero';
+  return numero1 / numero2;
+}
+
+// Loop principal
+while (dentroDaCalculadora) {
+  const opcao = selecionarOpcao();
+
+  switch (opcao) {
+    case "1": {
+      const resultadoSoma = somarNumeros();
+      alert(`A soma de todos os números é: ${resultadoSoma}`);
+      break;
+    }
+    case "2": {
+      const numero1 = Number(prompt('Digite o primeiro número:'));
+      const numero2 = Number(prompt('Digite o segundo número:'));
+      const subtracaoTotal = subtrairDoisNumeros(numero1, numero2);
+      alert(`O número ${numero1} menos o número ${numero2} é igual: ${subtracaoTotal}`);
+      break;
+    }
+    case "3": {
+      const valor = Number(prompt('Digite o valor:'));
+      const porcentagem = Number(prompt('Quantos porcento deseja adicionar ao valor?'));
+      const resultado = somarPorcentagem(valor, porcentagem);
+      alert(`O número ${valor} acrescentando ${porcentagem}% é igual: ${resultado}`);
+      break;
+    }
+    case "4": {
+      const numero1 = Number(prompt('Digite o primeiro número:'));
+      const numero2 = Number(prompt('Digite o segundo número:'));
+      const resultado = multiplicarDoisNumeros(numero1, numero2);
+      alert(`O número ${numero1} multiplicado pelo número ${numero2} é igual: ${resultado}`);
+      break;
+    }
+    case "5": {
+      const numero1 = Number(prompt('Digite o primeiro número:'));
+      const numero2 = Number(prompt('Digite o segundo número:'));
+      const resultado = dividirDoisNumeros(numero1, numero2);
+      alert(`O número ${numero1} dividido pelo número ${numero2} é igual: ${resultado}`);
+      break;
+    }
+    case "6":
+      dentroDaCalculadora = false;
+      alert('Saindo da calculadora. Até mais!');
+      break;
+    default:
+      alert('Opção inválida! Selecione algum número do menu.');
+      break;
+  }
+}
+</script>
+
+</body>
+</html>

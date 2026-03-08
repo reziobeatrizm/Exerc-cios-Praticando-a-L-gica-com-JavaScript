@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando a Lógica 5.2</title>
+</head>
+<body>
+
+    <!-- Exercício 16 -->
+
+<script>
+const preco16 = Number(prompt("Digite o preço do produto:"));
+const desconto16 = Number(prompt("Digite a porcentagem de desconto:"));
+const valorDesconto16 = preco16 * (desconto16 / 100);
+const precoFinal16 = preco16 - valorDesconto16;
+console.log("Valor do desconto: R$", valorDesconto16.toFixed(2));
+console.log("Preço final: R$", precoFinal16.toFixed(2));
+alert(`Valor do desconto: R$ ${valorDesconto16.toFixed(2)}\nPreço final: R$ ${precoFinal16.toFixed(2)}`);
+</script>
+
+<!-- Exercício 17 -->
+
+<script>
+const celsius17 = Number(prompt("Digite a temperatura em Celsius:"));
+const fahrenheit17 = celsius17 * 1.8 + 32;
+console.log(`A temperatura em Fahrenheit é: ${fahrenheit17.toFixed(1)}°F`);
+alert(`A temperatura em Fahrenheit é: ${fahrenheit17.toFixed(1)}°F`);
+</script>
+
+<!-- Exercício 18 -->
+
+<script>
+const dias18 = Number(prompt("Quantidade de dias de aluguel:"));
+const km18 = Number(prompt("Quantidade de km rodados:"));
+const preco18 = dias18 * 60 + km18 * 0.15;
+console.log("O preço total a pagar é: R$", preco18.toFixed(2));
+alert("O preço total a pagar é: R$ " + preco18.toFixed(2));
+</script>
+
+<!-- Exercício 19 -->
+
+<script>
+const idade19 = Number(prompt("Digite sua idade:"));
+let situacao19;
+if (idade19 < 16) {
+  situacao19 = "Não votante";
+} else if (idade19 <= 17) {
+  situacao19 = "Voto opcional";
+} else if (idade19 <= 70) {
+  situacao19 = "Voto obrigatório";
+} else {
+  situacao19 = "Voto opcional";
+}
+console.log("Situação:", situacao19);
+alert("Situação: " + situacao19);
+</script>
+
+<!-- Exercício 20 -->
+
+<script>
+const peso20 = Number(prompt("Digite seu peso (kg):"));
+const altura20 = Number(prompt("Digite sua altura (m):"));
+const imc20 = peso20 / (altura20 * altura20);
+let classificacao20;
+if (imc20 < 18.5) {
+  classificacao20 = "Abaixo do peso";
+} else if (imc20 < 25) {
+  classificacao20 = "Peso normal";
+} else if (imc20 < 30) {
+  classificacao20 = "Sobrepeso";
+} else {
+  classificacao20 = "Obesidade";
+}
+console.log(`Seu IMC é: ${imc20.toFixed(2)}\nClassificação: ${classificacao20}`);
+alert(`Seu IMC é: ${imc20.toFixed(2)}\nClassificação: ${classificacao20}`);
+</script>
+
+<!-- Exercício 21 -->
+
+<script>
+const preco21 = Number(prompt("Digite o preço do produto:"));
+const opcao21 = Number(prompt("Opções de pagamento:\n1- À vista (10% desconto)\n2- 2x no cartão\n3- 3x ou mais (20% juros)\nDigite a opção:"));
+let valorFinal21;
+if (opcao21 === 1) {
+  valorFinal21 = preco21 * 0.9;
+} else if (opcao21 === 2) {
+  valorFinal21 = preco21;
+} else if (opcao21 >= 3) {
+  valorFinal21 = preco21 * 1.2;
+} else {
+  valorFinal21 = preco21;
+}
+console.log("Valor final: R$", valorFinal21.toFixed(2));
+alert("Valor final: R$ " + valorFinal21.toFixed(2));
+</script>
+
+<!-- Exercício 22 -->
+
+<script>
+const lado1 = Number(prompt("Digite o primeiro lado:"));
+const lado2 = Number(prompt("Digite o segundo lado:"));
+const lado3 = Number(prompt("Digite o terceiro lado:"));
+if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+  console.log("As retas PODEM formar um triângulo.");
+  alert("As retas PODEM formar um triângulo.");
+} else {
+  console.log("As retas NÃO podem formar um triângulo.");
+  alert("As retas NÃO podem formar um triângulo.");
+}
+</script>
+
+<!-- Exercício 23 -->
+
+<script>
+const n1_23 = Number(prompt("Digite o primeiro número:"));
+const n2_23 = Number(prompt("Digite o segundo número:"));
+const n3_23 = Number(prompt("Digite o terceiro número:"));
+const maior23 = Math.max(n1_23, n2_23, n3_23);
+console.log("O maior número é:", maior23);
+alert("O maior número é: " + maior23);
+</script>
+
+<!-- Exercício 24 -->
+
+<script>
+const num1_24 = Number(prompt("Digite o primeiro número:"));
+const num2_24 = Number(prompt("Digite o segundo número:"));
+let ordem24 = [num1_24, num2_24].sort((a,b) => a-b);
+console.log("Ordem crescente:", ordem24.join(", "));
+alert("Ordem crescente: " + ordem24.join(", "));
+</script>
+
+<!-- Exercício 25 -->
+
+<script>
+const ano25 = Number(prompt("Digite um ano:"));
+let bissexto25 = (ano25 % 4 === 0 && ano25 % 100 !== 0) || (ano25 % 400 === 0);
+if (bissexto25) {
+  console.log(`O ano ${ano25} é bissexto.`);
+  alert(`O ano ${ano25} é bissexto.`);
+} else {
+  console.log(`O ano ${ano25} NÃO é bissexto.`);
+  alert(`O ano ${ano25} NÃO é bissexto.`);
+}
+</script>
+
+<!-- Exercício 26 -->
+
+<script>
+const anoNascimento26 = Number(prompt("Digite o ano de nascimento:"));
+const idade26 = 2025 - anoNascimento26;
+let situacao26;
+if (idade26 < 18) {
+  situacao26 = `Ainda vai se alistar. Faltam ${18 - idade26} anos.`;
+} else if (idade26 === 18) {
+  situacao26 = "Você deve se alistar este ano.";
+} else {
+  situacao26 = "Você já passou do alistamento.";
+}
+console.log(`Você tem ${idade26} anos em 2025.\n${situacao26}`);
+alert(`Você tem ${idade26} anos em 2025.\n${situacao26}`);
+</script>
+
+<!-- Exercício 27 -->
+
+<script>
+const nota1_27 = Number(prompt("Digite a primeira nota:"));
+const nota2_27 = Number(prompt("Digite a segunda nota:"));
+const media27 = (nota1_27 + nota2_27) / 2;
+let status27;
+if (media27 < 5) {
+  status27 = "REPROVADO";
+} else if (media27 < 7) {
+  status27 = "RECUPERAÇÃO";
+} else {
+  status27 = "APROVADO";
+}
+console.log(`Sua média é: ${media27.toFixed(2)}\nStatus: ${status27}`);
+alert(`Sua média é: ${media27.toFixed(2)}\nStatus: ${status27}`);
+</script>
+
+<!-- Exercício 28 -->
+
+<script>
+const jog1_28 = Number(prompt("Jogador 1 - escolha: 1-Pedra, 2-Papel, 3-Tesoura"));
+const jog2_28 = Number(prompt("Jogador 2 - escolha: 1-Pedra, 2-Papel, 3-Tesoura"));
+let resultado28;
+if (jog1_28 === jog2_28) {
+  resultado28 = "Empate!";
+} else if ((jog1_28 === 1 && jog2_28 === 3) || (jog1_28 === 2 && jog2_28 === 1) || (jog1_28 === 3 && jog2_28 === 2)) {
+  resultado28 = "Jogador 1 VENCEU!";
+} else {
+  resultado28 = "Jogador 2 VENCEU!";
+}
+console.log(resultado28);
+alert(resultado28);
+</script>
+
+<!-- Exercício 29 -->
+
+<script>
+const distancia29 = Number(prompt("Digite a distância da viagem (Km):"));
+let preco29 = distancia29 <= 200 ? distancia29 * 0.5 : distancia29 * 0.45;
+console.log("O preço da passagem é: R$", preco29.toFixed(2));
+alert("O preço da passagem é: R$ " + preco29.toFixed(2));
+</script>
+
+<!-- Exercício 30 -->
+ 
+<script>
+const valorCasa30 = Number(prompt("Digite o valor da casa:"));
+const salario30 = Number(prompt("Digite seu salário:"));
+const anos30 = Number(prompt("Em quantos anos vai pagar:"));
+const prestacao30 = valorCasa30 / (anos30 * 12);
+if (prestacao30 <= salario30 * 0.3) {
+  console.log(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo APROVADO!`);
+  alert(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo APROVADO!`);
+} else {
+  console.log(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo NEGADO!`);
+  alert(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo NEGADO!`);
+}
+</script>
+    
+</body>
+</html>

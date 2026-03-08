@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica De Programação</title>
+</head>
+
+<body>
+
+    <!-- Lógica De Programação 5-1 -->
+    <!-- Exercício 1 -->
+    <script>
+        console.log("Olá, Mundo!");
+    </script>
+
+    <!-- Exercício 2 -->
+    <script>
+        const nome = prompt("Digite seu nome:");
+        const sobrenome = prompt("Digite seu sobrenome:");
+        const nomeCompleto = `${nome} ${sobrenome}`;
+        console.log("Nome completo:", nomeCompleto);
+        alert("Nome completo: " + nomeCompleto);
+    </script>
+
+    <!-- Exercício 3 -->
+    <script>
+        const n1 = Number(prompt("Digite o primeiro número:"));
+        const n2 = Number(prompt("Digite o segundo número:"));
+        const soma = n1 + n2;
+        console.log("A soma é:", soma);
+        alert("A soma é: " + soma);
+    </script>
+
+    <!-- Exercício 4 -->
+    <script>
+        const nota1 = Number(prompt("Digite a primeira nota:"));
+        const nota2 = Number(prompt("Digite a segunda nota:"));
+        const nota3 = Number(prompt("Digite a terceira nota:"));
+        const media = (nota1 + nota2 + nota3) / 3;
+        console.log("A média é:", media);
+        alert("A média é: " + media);
+    </script>
+
+    <!-- Exercício 5 -->
+    <script>
+        const numero5 = Number(prompt("Digite um número:"));
+        const antecessor = numero5 - 1;
+        const sucessor = numero5 + 1;
+        console.log("Antecessor:", antecessor);
+        console.log("Sucessor:", sucessor);
+        alert(`Antecessor: ${antecessor} | Sucessor: ${sucessor}`);
+    </script>
+
+    <!-- Exercício 6 -->
+    <script>
+        const salario = Number(prompt("Digite o salário:"));
+        const novoSalario = salario * 1.15;
+        console.log("Novo salário:", novoSalario);
+        alert("Novo salário: R$ " + novoSalario.toFixed(2));
+    </script>
+
+    <!-- Exercício 7 -->
+    <script>
+        const reais = Number(prompt("Digite o valor em reais:"));
+        const dolares = reais / 5;
+        console.log("Valor em dólares:", dolares);
+        alert("Valor em dólares: $ " + dolares.toFixed(2));
+    </script>
+
+    <!-- Exercício 8 -->
+    <script>
+        const numero8 = Number(prompt("Digite um número:"));
+        if (numero8 % 2 === 0) {
+            console.log("O número é PAR");
+            alert("O número é PAR");
+        } else {
+            console.log("O número é ÍMPAR");
+            alert("O número é ÍMPAR");
+        }
+    </script>
+
+    <!-- Exercício 9 -->
+    <script>
+        const idade9 = Number(prompt("Digite sua idade:"));
+        if (idade9 >= 18) {
+            console.log("Maior de idade");
+            alert("Maior de idade");
+        } else {
+            console.log("Menor de idade");
+            alert("Menor de idade");
+        }
+    </script>
+
+    <!-- Exercício 10 -->
+    <script>
+        const num1Ex10 = Number(prompt("Digite o primeiro número:"));
+        const num2Ex10 = Number(prompt("Digite o segundo número:"));
+        if (num1Ex10 > num2Ex10) {
+            alert(`O maior é: ${num1Ex10}`);
+        } else if (num2Ex10 > num1Ex10) {
+            alert(`O maior é: ${num2Ex10}`);
+        } else {
+            alert("Os números são iguais");
+        }
+    </script>
+
+    <!-- Exercício 11 -->
+    <script>
+        const notaA = Number(prompt("Digite a primeira nota:"));
+        const notaB = Number(prompt("Digite a segunda nota:"));
+        const mediaFinal = (notaA + notaB) / 2;
+        if (mediaFinal >= 7) {
+            alert("Aprovado");
+        } else {
+            alert("Reprovado");
+        }
+    </script>
+
+    <!-- Exercício 12 -->
+    <script>
+        const numero12 = Number(prompt("Digite um número:"));
+        if (numero12 > 0) {
+            alert("Positivo");
+        } else if (numero12 < 0) {
+            alert("Negativo");
+        } else {
+            alert("Zero");
+        }
+    </script>
+
+    <!-- Exercício 13 -->
+    <script>
+        const idade13 = Number(prompt("Digite a idade do nadador:"));
+        if (idade13 >= 5 && idade13 <= 7) {
+            alert("Infantil A");
+        } else if (idade13 <= 11) {
+            alert("Infantil B");
+        } else if (idade13 <= 13) {
+            alert("Juvenil A");
+        } else if (idade13 <= 17) {
+            alert("Juvenil B");
+        } else {
+            alert("Adulto");
+        }
+    </script>
+
+    <!-- Exercício 14 -->
+    <script>
+        const usuario = prompt("Digite o usuário:");
+        const senha = prompt("Digite a senha:");
+        if (usuario === "admin" && senha === "1234") {
+            alert("Login efetuado com sucesso");
+        } else {
+            alert("Falha na autenticação");
+        }
+    </script>
+
+    <!-- Exercício 15 -->
+    <script>
+        const peso = Number(prompt("Digite seu peso (kg):"));
+        const altura = Number(prompt("Digite sua altura (m):"));
+        const imc = peso / (altura * altura);
+        console.log("IMC:", imc);
+        alert("Seu IMC é: " + imc.toFixed(2));
+    </script>
+
+
+    <!-- Lógica De Programação 5-2 -->
+
+    <!-- Exercício 16 -->
+    <script>
+        const preco16 = Number(prompt("Digite o preço do produto:"));
+        const desconto16 = Number(prompt("Digite a porcentagem de desconto:"));
+        const valorDesconto16 = preco16 * (desconto16 / 100);
+        const precoFinal16 = preco16 - valorDesconto16;
+        console.log("Valor do desconto: R$", valorDesconto16.toFixed(2));
+        console.log("Preço final: R$", precoFinal16.toFixed(2));
+        alert(`Valor do desconto: R$ ${valorDesconto16.toFixed(2)}\nPreço final: R$ ${precoFinal16.toFixed(2)}`);
+    </script>
+
+    <!-- Exercício 17 -->
+    <script>
+        const celsius17 = Number(prompt("Digite a temperatura em Celsius:"));
+        const fahrenheit17 = celsius17 * 1.8 + 32;
+        console.log(`A temperatura em Fahrenheit é: ${fahrenheit17.toFixed(1)}°F`);
+        alert(`A temperatura em Fahrenheit é: ${fahrenheit17.toFixed(1)}°F`);
+    </script>
+
+    <!-- Exercício 18 -->
+    <script>
+        const dias18 = Number(prompt("Quantidade de dias de aluguel:"));
+        const km18 = Number(prompt("Quantidade de km rodados:"));
+        const preco18 = dias18 * 60 + km18 * 0.15;
+        console.log("O preço total a pagar é: R$", preco18.toFixed(2));
+        alert("O preço total a pagar é: R$ " + preco18.toFixed(2));
+    </script>
+
+    <!-- Exercício 19 -->
+    <script>
+        const idade19 = Number(prompt("Digite sua idade:"));
+        let situacao19;
+        if (idade19 < 16) {
+            situacao19 = "Não votante";
+        } else if (idade19 <= 17) {
+            situacao19 = "Voto opcional";
+        } else if (idade19 <= 70) {
+            situacao19 = "Voto obrigatório";
+        } else {
+            situacao19 = "Voto opcional";
+        }
+        console.log("Situação:", situacao19);
+        alert("Situação: " + situacao19);
+    </script>
+
+    <!-- Exercício 20 -->
+    <script>
+        const peso20 = Number(prompt("Digite seu peso (kg):"));
+        const altura20 = Number(prompt("Digite sua altura (m):"));
+        const imc20 = peso20 / (altura20 * altura20);
+        let classificacao20;
+        if (imc20 < 18.5) {
+            classificacao20 = "Abaixo do peso";
+        } else if (imc20 < 25) {
+            classificacao20 = "Peso normal";
+        } else if (imc20 < 30) {
+            classificacao20 = "Sobrepeso";
+        } else {
+            classificacao20 = "Obesidade";
+        }
+        console.log(`Seu IMC é: ${imc20.toFixed(2)}\nClassificação: ${classificacao20}`);
+        alert(`Seu IMC é: ${imc20.toFixed(2)}\nClassificação: ${classificacao20}`);
+    </script>
+
+    <!-- Exercício 21 -->
+    <script>
+        const preco21 = Number(prompt("Digite o preço do produto:"));
+        const opcao21 = Number(prompt("Opções de pagamento:\n1- À vista (10% desconto)\n2- 2x no cartão\n3- 3x ou mais (20% juros)\nDigite a opção:"));
+        let valorFinal21;
+        if (opcao21 === 1) {
+            valorFinal21 = preco21 * 0.9;
+        } else if (opcao21 === 2) {
+            valorFinal21 = preco21;
+        } else if (opcao21 >= 3) {
+            valorFinal21 = preco21 * 1.2;
+        } else {
+            valorFinal21 = preco21;
+        }
+        console.log("Valor final: R$", valorFinal21.toFixed(2));
+        alert("Valor final: R$ " + valorFinal21.toFixed(2));
+    </script>
+
+    <!-- Exercício 22 -->
+    <script>
+        const lado1 = Number(prompt("Digite o primeiro lado:"));
+        const lado2 = Number(prompt("Digite o segundo lado:"));
+        const lado3 = Number(prompt("Digite o terceiro lado:"));
+        if (lado1 + lado2 > lado3 && lado1 + lado3 > lado2 && lado2 + lado3 > lado1) {
+            console.log("As retas PODEM formar um triângulo.");
+            alert("As retas PODEM formar um triângulo.");
+        } else {
+            console.log("As retas NÃO podem formar um triângulo.");
+            alert("As retas NÃO podem formar um triângulo.");
+        }
+    </script>
+
+    <!-- Exercício 23 -->
+    <script>
+        const n1_23 = Number(prompt("Digite o primeiro número:"));
+        const n2_23 = Number(prompt("Digite o segundo número:"));
+        const n3_23 = Number(prompt("Digite o terceiro número:"));
+        const maior23 = Math.max(n1_23, n2_23, n3_23);
+        console.log("O maior número é:", maior23);
+        alert("O maior número é: " + maior23);
+    </script>
+
+    <!-- Exercício 24 -->
+    <script>
+        const num1_24 = Number(prompt("Digite o primeiro número:"));
+        const num2_24 = Number(prompt("Digite o segundo número:"));
+        let ordem24 = [num1_24, num2_24].sort((a, b) => a - b);
+        console.log("Ordem crescente:", ordem24.join(", "));
+        alert("Ordem crescente: " + ordem24.join(", "));
+    </script>
+
+    <!-- Exercício 25 -->
+    <script>
+        const ano25 = Number(prompt("Digite um ano:"));
+        let bissexto25 = (ano25 % 4 === 0 && ano25 % 100 !== 0) || (ano25 % 400 === 0);
+        if (bissexto25) {
+            console.log(`O ano ${ano25} é bissexto.`);
+            alert(`O ano ${ano25} é bissexto.`);
+        } else {
+            console.log(`O ano ${ano25} NÃO é bissexto.`);
+            alert(`O ano ${ano25} NÃO é bissexto.`);
+        }
+    </script>
+
+    <!-- Exercício 26 -->
+    <script>
+        const anoNascimento26 = Number(prompt("Digite o ano de nascimento:"));
+        const idade26 = 2025 - anoNascimento26;
+        let situacao26;
+        if (idade26 < 18) {
+            situacao26 = `Ainda vai se alistar. Faltam ${18 - idade26} anos.`;
+        } else if (idade26 === 18) {
+            situacao26 = "Você deve se alistar este ano.";
+        } else {
+            situacao26 = "Você já passou do alistamento.";
+        }
+        console.log(`Você tem ${idade26} anos em 2025.\n${situacao26}`);
+        alert(`Você tem ${idade26} anos em 2025.\n${situacao26}`);
+    </script>
+
+    <!-- Exercício 27 -->
+    <script>
+        const nota1_27 = Number(prompt("Digite a primeira nota:"));
+        const nota2_27 = Number(prompt("Digite a segunda nota:"));
+        const media27 = (nota1_27 + nota2_27) / 2;
+        let status27;
+        if (media27 < 5) {
+            status27 = "REPROVADO";
+        } else if (media27 < 7) {
+            status27 = "RECUPERAÇÃO";
+        } else {
+            status27 = "APROVADO";
+        }
+        console.log(`Sua média é: ${media27.toFixed(2)}\nStatus: ${status27}`);
+        alert(`Sua média é: ${media27.toFixed(2)}\nStatus: ${status27}`);
+    </script>
+
+    <!-- Exercício 28 -->
+    <script>
+        const jog1_28 = Number(prompt("Jogador 1 - escolha: 1-Pedra, 2-Papel, 3-Tesoura"));
+        const jog2_28 = Number(prompt("Jogador 2 - escolha: 1-Pedra, 2-Papel, 3-Tesoura"));
+        let resultado28;
+        if (jog1_28 === jog2_28) {
+            resultado28 = "Empate!";
+        } else if ((jog1_28 === 1 && jog2_28 === 3) || (jog1_28 === 2 && jog2_28 === 1) || (jog1_28 === 3 && jog2_28 === 2)) {
+            resultado28 = "Jogador 1 VENCEU!";
+        } else {
+            resultado28 = "Jogador 2 VENCEU!";
+        }
+        console.log(resultado28);
+        alert(resultado28);
+    </script>
+
+    <!-- Exercício 29 -->
+    <script>
+        const distancia29 = Number(prompt("Digite a distância da viagem (Km):"));
+        let preco29 = distancia29 <= 200 ? distancia29 * 0.5 : distancia29 * 0.45;
+        console.log("O preço da passagem é: R$", preco29.toFixed(2));
+        alert("O preço da passagem é: R$ " + preco29.toFixed(2));
+    </script>
+
+    <!-- Exercício 30 -->
+    <script>
+        const valorCasa30 = Number(prompt("Digite o valor da casa:"));
+        const salario30 = Number(prompt("Digite seu salário:"));
+        const anos30 = Number(prompt("Em quantos anos vai pagar:"));
+        const prestacao30 = valorCasa30 / (anos30 * 12);
+        if (prestacao30 <= salario30 * 0.3) {
+            console.log(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo APROVADO!`);
+            alert(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo APROVADO!`);
+        } else {
+            console.log(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo NEGADO!`);
+            alert(`A prestação mensal será de: R$ ${prestacao30.toFixed(2)}\nEmpréstimo NEGADO!`);
+        }
+    </script>
+
+
+    <!-- Lógica De Programação 5-3 -->
+
+    <!-- Exercício 1 -->
+    <script>
+        const vetor1 = [];
+        for (let i = 0; i < 5; i++) {
+            vetor1[i] = Number(prompt(`Digite o número para a posição ${i + 1}:`));
+        }
+        console.log("Vetor preenchido:", vetor1);
+        alert("Vetor preenchido: " + vetor1.join(", "));
+    </script>
+
+    <!-- Exercício 2 -->
+    <script>
+        const vetor2 = [];
+        let soma2 = 0;
+        for (let i = 0; i < 6; i++) {
+            vetor2[i] = Number(prompt(`Digite o número ${i + 1}:`));
+            soma2 += vetor2[i];
+        }
+        console.log("Vetor:", vetor2);
+        console.log("Soma dos elementos:", soma2);
+        alert("Soma dos elementos: " + soma2);
+    </script>
+
+    <!-- Exercício 3 -->
+    <script>
+        const vetor3 = [];
+        const pares3 = [];
+        for (let i = 0; i < 8; i++) {
+            vetor3[i] = Number(prompt(`Digite o número ${i + 1}:`));
+            if (vetor3[i] % 2 === 0) pares3.push(vetor3[i]);
+        }
+        console.log("Números pares:", pares3);
+        alert("Números pares: " + pares3.join(", "));
+    </script>
+
+    <!-- Exercício 4 -->
+    <script>
+        const vetor4 = [];
+        for (let i = 0; i < 7; i++) {
+            vetor4[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        const maior4 = Math.max(...vetor4);
+        console.log("Vetor:", vetor4);
+        console.log("Maior número:", maior4);
+        alert("Maior número: " + maior4);
+    </script>
+
+    <!-- Exercício 5 -->
+    <script>
+        const notas5 = [];
+        let soma5 = 0;
+        for (let i = 0; i < 5; i++) {
+            notas5[i] = Number(prompt(`Digite a nota do aluno ${i + 1}:`));
+            soma5 += notas5[i];
+        }
+        const media5 = soma5 / notas5.length;
+        console.log("Notas:", notas5);
+        console.log("Média da turma:", media5.toFixed(2));
+        alert("Média da turma: " + media5.toFixed(2));
+    </script>
+
+    <!-- Exercício 6 -->
+    <script>
+        const vetor6 = [];
+        let contador6 = 0;
+        for (let i = 0; i < 10; i++) {
+            vetor6[i] = Number(prompt(`Digite o número ${i + 1}:`));
+            if (vetor6[i] % 2 !== 0) contador6++;
+        }
+        console.log("Vetor:", vetor6);
+        console.log("Quantidade de números ímpares:", contador6);
+        alert("Quantidade de números ímpares: " + contador6);
+    </script>
+
+    <!-- Exercício 7 -->
+    <script>
+        const vetor7 = [];
+        for (let i = 0; i < 10; i++) {
+            vetor7[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        const busca7 = Number(prompt("Digite o número que deseja buscar:"));
+        const encontrado7 = vetor7.includes(busca7);
+        console.log("Vetor:", vetor7);
+        if (encontrado7) {
+            console.log(`${busca7} encontrado no vetor`);
+            alert(`${busca7} encontrado no vetor`);
+        } else {
+            console.log(`${busca7} NÃO encontrado no vetor`);
+            alert(`${busca7} NÃO encontrado no vetor`);
+        }
+    </script>
+
+    <!-- Exercício 8 -->
+    <script>
+        const nomes8 = [];
+        const nomesComA = [];
+        for (let i = 0; i < 5; i++) {
+            nomes8[i] = prompt(`Digite o nome ${i + 1}:`);
+            if (nomes8[i].toUpperCase().startsWith('A')) nomesComA.push(nomes8[i]);
+        }
+        console.log("Nomes digitados:", nomes8);
+        console.log("Nomes que começam com 'A':", nomesComA);
+        alert("Nomes que começam com 'A': " + nomesComA.join(", "));
+    </script>
+
+    <!-- Exercício 9 -->
+    <script>
+        const vetor9 = [];
+        for (let i = 0; i < 6; i++) {
+            vetor9[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        console.log("Vetor original:", vetor9);
+        const invertido9 = [...vetor9].reverse();
+        console.log("Vetor invertido:", invertido9);
+        alert("Vetor invertido: " + invertido9.join(", "));
+    </script>
+
+    <!-- Exercício 10 -->
+    <script>
+        const notas10 = [];
+        let aprovados10 = 0;
+        for (let i = 0; i < 8; i++) {
+            notas10[i] = Number(prompt(`Digite a nota do aluno ${i + 1}:`));
+            if (notas10[i] >= 7) aprovados10++;
+        }
+        console.log("Notas:", notas10);
+        console.log("Número de alunos aprovados:", aprovados10);
+        alert("Número de alunos aprovados: " + aprovados10);
+    </script>
+
+
+    <!-- Lógica De Programação 5-5 -->
+
+    <!-- Exercício 1 -->
+    <script>
+        function mostrarBoasVindas() {
+            alert("Bem-vindo ao nosso programa!");
+            console.log("Bem-vindo ao nosso programa!");
+        }
+        mostrarBoasVindas();
+    </script>
+
+    <!-- Exercício 2 -->
+    <script>
+        function saudarUsuario(nome) {
+            alert(`Olá, ${nome}! Tenha um bom dia!`);
+            console.log(`Olá, ${nome}! Tenha um bom dia!`);
+        }
+        const nome2 = prompt("Digite seu nome:");
+        saudarUsuario(nome2);
+    </script>
+
+    <!-- Exercício 3 -->
+    <script>
+        function calcularDobro(num) {
+            return num * 2;
+        }
+        const numero3 = Number(prompt("Digite um número:"));
+        alert("O dobro é: " + calcularDobro(numero3));
+        console.log("O dobro é:", calcularDobro(numero3));
+    </script>
+
+    <!-- Exercício 4 -->
+    <script>
+        function calcularMedia(n1, n2, n3) {
+            return (n1 + n2 + n3) / 3;
+        }
+        const n1_4 = Number(prompt("Digite a primeira nota:"));
+        const n2_4 = Number(prompt("Digite a segunda nota:"));
+        const n3_4 = Number(prompt("Digite a terceira nota:"));
+        alert("Média: " + calcularMedia(n1_4, n2_4, n3_4).toFixed(2));
+        console.log("Média:", calcularMedia(n1_4, n2_4, n3_4).toFixed(2));
+    </script>
+
+    <!-- Exercício 5 -->
+    <script>
+        function verificarParidade(num) {
+            if (num % 2 === 0) {
+                alert("Par");
+                console.log("Par");
+            } else {
+                alert("Ímpar");
+                console.log("Ímpar");
+            }
+        }
+        const numero5_55 = Number(prompt("Digite um número:"));
+        verificarParidade(numero5_55);
+    </script>
+
+    <!-- Exercício 6 -->
+    <script>
+        function encontrarMaior(a, b) {
+            return a > b ? a : b;
+        }
+        const num1_6 = Number(prompt("Digite o primeiro número:"));
+        const num2_6 = Number(prompt("Digite o segundo número:"));
+        alert("O maior é: " + encontrarMaior(num1_6, num2_6));
+        console.log("O maior é:", encontrarMaior(num1_6, num2_6));
+    </script>
+
+    <!-- Exercício 7 -->
+    <script>
+        function mostrarTabuada(num) {
+            let resultado = "";
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${num} x ${i} = ${num * i}\n`;
+            }
+            alert(resultado);
+            console.log(resultado);
+        }
+        const numero7_55 = Number(prompt("Digite um número para ver a tabuada:"));
+        mostrarTabuada(numero7_55);
+    </script>
+
+    <!-- Exercício 8 -->
+    <script>
+        function contagemRegressiva(inicio) {
+            let resultado = "";
+            for (let i = inicio; i >= 0; i--) {
+                resultado += i + "\n";
+            }
+            alert(resultado);
+            console.log(resultado);
+        }
+        const inicio8 = Number(prompt("Digite o número inicial da contagem regressiva:"));
+        contagemRegressiva(inicio8);
+    </script>
+
+    <!-- Exercício 9 -->
+    <script>
+        function somarVetor(vetor) {
+            return vetor.reduce((soma, num) => soma + num, 0);
+        }
+        const vetor9_55 = [];
+        for (let i = 0; i < 5; i++) {
+            vetor9_55[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        alert("Soma dos elementos: " + somarVetor(vetor9_55));
+        console.log("Soma dos elementos:", somarVetor(vetor9_55));
+    </script>
+
+    <!-- Exercício 10 -->
+    <script>
+        function encontrarMenor(vetor) {
+            return Math.min(...vetor);
+        }
+        const vetor10_55 = [];
+        for (let i = 0; i < 5; i++) {
+            vetor10_55[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        alert("Menor valor: " + encontrarMenor(vetor10_55));
+        console.log("Menor valor:", encontrarMenor(vetor10_55));
+    </script>
+
+    <!-- Exercício 11 -->
+    <!-- CORRIGIDO: faltava a tag <script> de abertura -->
+    <script>
+        function contarPares(vetor) {
+            return vetor.filter(num => num % 2 === 0).length;
+        }
+        const vetor11 = [];
+        for (let i = 0; i < 6; i++) {
+            vetor11[i] = Number(prompt(`Digite o número ${i + 1}:`));
+        }
+        alert("Quantidade de números pares: " + contarPares(vetor11));
+        console.log("Quantidade de números pares:", contarPares(vetor11));
+    </script>
+
+    <!-- Exercício 12 -->
+    <script>
+        function verificarAprovacao(media) {
+            return media >= 7 ? "Aprovado" : "Reprovado";
+        }
+        const media12 = Number(prompt("Digite a média do aluno:"));
+        alert("Situação: " + verificarAprovacao(media12));
+        console.log("Situação:", verificarAprovacao(media12));
+    </script>
+
+    <!-- Exercício 13 -->
+    <script>
+        function calculadora(a, b, operacao) {
+            switch (operacao) {
+                case '+': return a + b;
+                case '-': return a - b;
+                case '*': return a * b;
+                case '/': return a / b;
+                default: return "Operação inválida";
+            }
+        }
+        const n1_13 = Number(prompt("Digite o primeiro número:"));
+        const n2_13 = Number(prompt("Digite o segundo número:"));
+        const op13 = prompt("Digite a operação (+ - * /):");
+        alert("Resultado: " + calculadora(n1_13, n2_13, op13));
+        console.log("Resultado:", calculadora(n1_13, n2_13, op13));
+    </script>
+
+    <!-- Exercício 14 -->
+    <script>
+        function limparTela() {
+            console.clear();
+            alert("Tela limpa!");
+        }
+        limparTela();
+    </script>
+
+    <!-- Exercício 15 -->
+    <script>
+        const somar = (a, b) => a + b;
+        const subtrair = (a, b) => a - b;
+        const multiplicar = (a, b) => a * b;
+        const dividir = (a, b) => b !== 0 ? a / b : "Erro: divisão por zero";
+
+        function menuCalculadora() {
+            let sair = false;
+            while (!sair) {
+                const escolha = prompt("Escolha a operação:\n1-Somar\n2-Subtrair\n3-Multiplicar\n4-Dividir\n5-Sair");
+                if (escolha === "5") { sair = true; break; }
+                const a = Number(prompt("Digite o primeiro número:"));
+                const b = Number(prompt("Digite o segundo número:"));
+                let resultado;
+                switch (escolha) {
+                    case "1": resultado = somar(a, b); break;
+                    case "2": resultado = subtrair(a, b); break;
+                    case "3": resultado = multiplicar(a, b); break;
+                    case "4": resultado = dividir(a, b); break;
+                    default: resultado = "Opção inválida"; break;
+                }
+                alert("Resultado: " + resultado);
+                console.log("Resultado:", resultado);
+            }
+        }
+        menuCalculadora();
+    </script>
+
+
+    <!-- Arrays E Objetos -->
+
+    <!-- Lista de Compras -->
+    <script>
+        const listaCompras = [];
+        for (let i = 0; i < 5; i++) {
+            const item = prompt(`Digite o item ${i + 1} da lista:`);
+            if (item) listaCompras.push(item);
+        }
+        alert("Lista final: " + listaCompras.join(", ") + "\nTotal de itens: " + listaCompras.length);
+        console.log("Lista final:", listaCompras);
+
+        const removerItem = prompt("Digite o nome do item a remover:");
+        const indexItem = listaCompras.indexOf(removerItem);
+        if (indexItem !== -1) {
+            listaCompras.splice(indexItem, 1);
+            alert("Lista atualizada: " + listaCompras.join(", "));
+            console.log("Lista atualizada:", listaCompras);
+        } else {
+            alert("Item não encontrado!");
+        }
+    </script>
+
+    <!-- Cadastro de Contato -->
+    <script>
+        let contato = {
+            nome: prompt("Digite o nome do contato:"),
+            telefone: prompt("Digite o telefone:"),
+            email: prompt("Digite o email:")
+        };
+        alert(`Contato:\nNome: ${contato.nome}\nTelefone: ${contato.telefone}\nEmail: ${contato.email}`);
+        console.log("Contato:", contato);
+
+        const atualizarCadastro = prompt("Deseja atualizar telefone ou email? (telefone/email/nenhum)").toLowerCase();
+        if (atualizarCadastro === "telefone") {
+            contato.telefone = prompt("Digite o novo telefone:");
+        } else if (atualizarCadastro === "email") {
+            contato.email = prompt("Digite o novo email:");
+        }
+
+        const limparCadastro = prompt("Deseja limpar o cadastro? (sim/não)").toLowerCase();
+        if (limparCadastro === "sim") {
+            contato = { nome: "", telefone: "", email: "" };
+        }
+
+        alert("Cadastro atualizado: " + JSON.stringify(contato));
+        console.log("Cadastro atualizado:", contato);
+    </script>
+
+    <!-- Filtrar Adultos -->
+    <script>
+        const idades = [];
+        for (let i = 0; i < 5; i++) {
+            idades.push(Number(prompt(`Digite a idade ${i + 1}:`)));
+        }
+        alert("Todas as idades: " + idades.join(", "));
+        console.log("Todas as idades:", idades);
+
+        const adultos = idades.filter(x => x >= 18);
+        const menores = idades.filter(x => x < 18);
+        alert(`Idades de adultos: ${adultos.join(", ")}\nAdultos: ${adultos.length}\nMenores: ${menores.length}`);
+        console.log("Adultos:", adultos, "Menores:", menores);
+    </script>
+
+    <!-- Calculadora de Preço -->
+    <script>
+        const precos = [];
+        for (let i = 0; i < 4; i++) {
+            precos.push(Number(prompt(`Digite o preço ${i + 1}:`)));
+        }
+        const somaTotal = precos.reduce((a, b) => a + b, 0);
+        const mediaPrecos = somaTotal / precos.length;
+        alert(`Soma total: ${somaTotal}\nMédia: ${mediaPrecos.toFixed(2)}`);
+        console.log("Soma total:", somaTotal, "Média:", mediaPrecos);
+
+        const maiorPreco = Math.max(...precos);
+        precos.splice(precos.indexOf(maiorPreco), 1);
+        const novaMedia = precos.reduce((a, b) => a + b, 0) / precos.length;
+        alert(`Maior preço removido. Nova média: ${novaMedia.toFixed(2)}`);
+        console.log("Nova média após remover maior preço:", novaMedia);
+    </script>
+
+    <!-- Inventário Simples -->
+    <script>
+        let produto = {
+            nome: prompt("Digite o nome do produto:"),
+            quantidade: Number(prompt("Digite a quantidade:"))
+        };
+        alert(produto.quantidade > 0 ? "Em estoque" : "Fora de estoque");
+        console.log(produto);
+
+        const opcaoProduto = prompt("Deseja 'repor' ou 'retirar' quantidade?");
+        const valorProduto = Number(prompt("Quantidade:"));
+        if (opcaoProduto === "repor") produto.quantidade += valorProduto;
+        else if (opcaoProduto === "retirar") produto.quantidade -= valorProduto;
+        alert("Novo estado do produto: " + JSON.stringify(produto));
+        console.log("Novo estado:", produto);
+    </script>
+
+    <!-- Buscar Usuário -->
+    <script>
+        let usuarios = [
+            { nome: "Alice", email: "alice@email.com" },
+            { nome: "Bruno", email: "bruno@email.com" },
+            { nome: "Carla", email: "carla@email.com" }
+        ];
+        const emailBusca = prompt("Digite o email do usuário a buscar:");
+        const usuarioEncontrado = usuarios.find(u => u.email === emailBusca);
+        if (usuarioEncontrado) {
+            alert("Usuário encontrado: " + usuarioEncontrado.nome);
+            const removerUsuario = prompt("Deseja remover este usuário? (sim/não)").toLowerCase();
+            if (removerUsuario === "sim") {
+                usuarios = usuarios.filter(u => u.email !== emailBusca);
+                alert("Usuário removido. Lista atualizada: " + usuarios.map(u => u.nome).join(", "));
+            }
+        } else {
+            alert("Usuário não encontrado!");
+        }
+        console.log("Lista de usuários:", usuarios);
+    </script>
+
+    <!-- Marcar Tarefas -->
+    <script>
+        let tarefas = [];
+        for (let i = 0; i < 3; i++) {
+            tarefas.push({ texto: prompt(`Digite a tarefa ${i + 1}:`), feita: false });
+        }
+        alert("Tarefas:\n" + tarefas.map((t, i) => `${i + 1}- ${t.texto} [${t.feita ? "Feita" : "Não feita"}]`).join("\n"));
+        console.log("Tarefas iniciais:", tarefas);
+
+        const indiceFeita = Number(prompt("Qual tarefa deseja marcar como feita? (1-3)")) - 1;
+        if (tarefas[indiceFeita]) tarefas[indiceFeita].feita = true;
+
+        const indiceRemover = Number(prompt("Qual tarefa deseja remover? (1-3)")) - 1;
+        if (tarefas[indiceRemover]) tarefas.splice(indiceRemover, 1);
+
+        alert("Tarefas atualizadas:\n" + tarefas.map((t, i) => `${i + 1}- ${t.texto} [${t.feita ? "Feita" : "Não feita"}]`).join("\n"));
+        console.log("Tarefas atualizadas:", tarefas);
+        alert("Tarefas concluídas: " + tarefas.filter(t => t.feita).length);
+    </script>
+
+    <!-- Contagem por Categoria -->
+    <script>
+        const itens = [];
+        for (let i = 0; i < 6; i++) {
+            const nomeItem = prompt(`Digite o nome do item ${i + 1}:`);
+            const categoriaItem = prompt("Digite a categoria:");
+            itens.push({ nome: nomeItem, categoria: categoriaItem });
+        }
+        let contagem = {};
+        itens.forEach(i => contagem[i.categoria] = (contagem[i.categoria] || 0) + 1);
+        alert("Contagem por categoria: " + JSON.stringify(contagem));
+        console.log("Contagem:", contagem);
+
+        const categoriaRemover = prompt("Digite a categoria a remover:");
+        const itensAtualizados = itens.filter(i => i.categoria !== categoriaRemover);
+        contagem = {};
+        itensAtualizados.forEach(i => contagem[i.categoria] = (contagem[i.categoria] || 0) + 1);
+        alert("Lista atualizada e contagem: " + JSON.stringify(contagem));
+        console.log("Itens atualizados:", itensAtualizados, "Contagem:", contagem);
+    </script>
+
+    <!-- Ranking de Pontuação -->
+    <script>
+        let ranking = [];
+        for (let i = 0; i < 4; i++) {
+            const nomeRanking = prompt(`Digite o nome ${i + 1}:`);
+            const pontosRanking = Number(prompt("Digite os pontos:"));
+            ranking.push({ nome: nomeRanking, pontos: pontosRanking });
+        }
+        let maior = ranking.reduce((a, b) => a.pontos > b.pontos ? a : b);
+        alert(`Maior pontuador: ${maior.nome} (${maior.pontos})`);
+        console.log("Ranking inicial:", ranking);
+
+        const atualizarRanking = prompt("Deseja atualizar a pontuação de alguém? (sim/não)").toLowerCase();
+        if (atualizarRanking === "sim") {
+            const nomeAtualizar = prompt("Digite o nome:");
+            const novoPonto = Number(prompt("Digite a nova pontuação:"));
+            const usuarioRanking = ranking.find(u => u.nome === nomeAtualizar);
+            if (usuarioRanking) usuarioRanking.pontos = novoPonto;
+            maior = ranking.reduce((a, b) => a.pontos > b.pontos ? a : b);
+            alert(`Novo maior pontuador: ${maior.nome} (${maior.pontos})`);
+        }
+        console.log("Ranking atualizado:", ranking);
+    </script>
+
+    <!-- Carrinho Simples -->
+    <script>
+        const carrinho = [];
+        for (let i = 0; i < 5; i++) {
+            const nomeProduto = prompt(`Digite o nome do produto ${i + 1}:`);
+            if (!nomeProduto) break;
+            const precoProduto = Number(prompt("Digite o preço:"));
+            carrinho.push({ nome: nomeProduto, preco: precoProduto });
+        }
+        const calcularTotal = carr => carr.reduce((soma, p) => soma + p.preco, 0);
+
+        let totalCarrinho = calcularTotal(carrinho);
+        let freteCarrinho = totalCarrinho > 100 ? 0 : 10;
+        alert(`Total: R$ ${totalCarrinho}\nFrete: R$ ${freteCarrinho}`);
+        console.log("Carrinho:", carrinho, "Total:", totalCarrinho, "Frete:", freteCarrinho);
+
+        const removerProduto = prompt("Deseja remover algum produto pelo nome? (sim/não)").toLowerCase();
+        if (removerProduto === "sim") {
+            const nomeRemover = prompt("Digite o nome do produto:");
+            const carrinhoAtualizado = carrinho.filter(p => p.nome !== nomeRemover);
+            totalCarrinho = calcularTotal(carrinhoAtualizado);
+            freteCarrinho = totalCarrinho > 100 ? 0 : 10;
+            alert(`Novo total: R$ ${totalCarrinho}\nFrete: R$ ${freteCarrinho}`);
+            console.log("Carrinho atualizado:", carrinhoAtualizado);
+        }
+    </script>
+
+
+    <!-- Calculadora -->
+
+    <script>
+        alert('Boas-vindas à calculadora!');
+
+        let dentroDaCalculadora = true;
+
+        function selecionarOpcao() {
+            return prompt(`
+    1 - Somar números
+    2 - Subtrair dois números
+    3 - Soma de porcentagem
+    4 - Multiplicação de dois números
+    5 - Divisão de dois números
+    6 - Sair
+  `);
+        }
+
+        function somarNumeros() {
+            const quantidadeDeNumeros = Number(prompt('Digite quantos números você deseja somar:'));
+            let somaTotal = 0;
+            for (let i = 0; i < quantidadeDeNumeros; i++) {
+                const numeroSoma = Number(prompt(`Digite o ${i + 1}º número:`));
+                somaTotal += numeroSoma;
+            }
+            return somaTotal;
+        }
+
+        function subtrairDoisNumeros(numero1, numero2) {
+            return numero1 - numero2;
+        }
+
+        function somarPorcentagem(valor, porcentagem) {
+            return valor + (valor * (porcentagem / 100));
+        }
+
+        function multiplicarDoisNumeros(numero1, numero2) {
+            return numero1 * numero2;
+        }
+
+        function dividirDoisNumeros(numero1, numero2) {
+            if (numero2 === 0) return 'Erro: divisão por zero';
+            return numero1 / numero2;
+        }
+
+        while (dentroDaCalculadora) {
+            const opcao = selecionarOpcao();
+
+            switch (opcao) {
+                case "1": {
+                    const resultadoSoma = somarNumeros();
+                    alert(`A soma de todos os números é: ${resultadoSoma}`);
+                    break;
+                }
+                case "2": {
+                    const numero1 = Number(prompt('Digite o primeiro número:'));
+                    const numero2 = Number(prompt('Digite o segundo número:'));
+                    const subtracaoTotal = subtrairDoisNumeros(numero1, numero2);
+                    alert(`O número ${numero1} menos o número ${numero2} é igual: ${subtracaoTotal}`);
+                    break;
+                }
+                case "3": {
+                    const valor = Number(prompt('Digite o valor:'));
+                    const porcentagem = Number(prompt('Quantos porcento deseja adicionar ao valor?'));
+                    const resultado = somarPorcentagem(valor, porcentagem);
+                    alert(`O número ${valor} acrescentando ${porcentagem}% é igual: ${resultado}`);
+                    break;
+                }
+                case "4": {
+                    const numero1 = Number(prompt('Digite o primeiro número:'));
+                    const numero2 = Number(prompt('Digite o segundo número:'));
+                    const resultado = multiplicarDoisNumeros(numero1, numero2);
+                    alert(`O número ${numero1} multiplicado pelo número ${numero2} é igual: ${resultado}`);
+                    break;
+                }
+                case "5": {
+                    const numero1 = Number(prompt('Digite o primeiro número:'));
+                    const numero2 = Number(prompt('Digite o segundo número:'));
+                    const resultado = dividirDoisNumeros(numero1, numero2);
+                    alert(`O número ${numero1} dividido pelo número ${numero2} é igual: ${resultado}`);
+                    break;
+                }
+                case "6":
+                    dentroDaCalculadora = false;
+                    alert('Saindo da calculadora. Até mais!');
+                    break;
+                default:
+                    alert('Opção inválida! Selecione algum número do menu.');
+                    break;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

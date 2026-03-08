@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando a Lógica 5.3</title>
+</head>
+<body>
+    <!-- Exercício 1 -->
+<script>
+const vetor1 = [];
+for (let i = 0; i < 5; i++) {
+  vetor1[i] = Number(prompt(`Digite o número para a posição ${i+1}:`));
+}
+console.log("Vetor preenchido:", vetor1);
+alert("Vetor preenchido: " + vetor1.join(", "));
+</script>
+
+<!-- Exercício 2 -->
+<script>
+const vetor2 = [];
+let soma2 = 0;
+for (let i = 0; i < 6; i++) {
+  vetor2[i] = Number(prompt(`Digite o número ${i+1}:`));
+  soma2 += vetor2[i];
+}
+console.log("Vetor:", vetor2);
+console.log("Soma dos elementos:", soma2);
+alert("Soma dos elementos: " + soma2);
+</script>
+
+<!-- Exercício 3 -->
+<script>
+const vetor3 = [];
+const pares3 = [];
+for (let i = 0; i < 8; i++) {
+  vetor3[i] = Number(prompt(`Digite o número ${i+1}:`));
+  if (vetor3[i] % 2 === 0) pares3.push(vetor3[i]);
+}
+console.log("Números pares:", pares3);
+alert("Números pares: " + pares3.join(", "));
+</script>
+
+<!-- Exercício 4 -->
+<script>
+const vetor4 = [];
+for (let i = 0; i < 7; i++) {
+  vetor4[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+const maior4 = Math.max(...vetor4);
+console.log("Vetor:", vetor4);
+console.log("Maior número:", maior4);
+alert("Maior número: " + maior4);
+</script>
+
+<!-- Exercício 5 -->
+<script>
+const notas5 = [];
+let soma5 = 0;
+for (let i = 0; i < 5; i++) {
+  notas5[i] = Number(prompt(`Digite a nota do aluno ${i+1}:`));
+  soma5 += notas5[i];
+}
+const media5 = soma5 / notas5.length;
+console.log("Notas:", notas5);
+console.log("Média da turma:", media5.toFixed(2));
+alert("Média da turma: " + media5.toFixed(2));
+</script>
+
+<!-- Exercício 6 -->
+<script>
+const vetor6 = [];
+let contador6 = 0;
+for (let i = 0; i < 10; i++) {
+  vetor6[i] = Number(prompt(`Digite o número ${i+1}:`));
+  if (vetor6[i] % 2 !== 0) contador6++;
+}
+console.log("Vetor:", vetor6);
+console.log("Quantidade de números ímpares:", contador6);
+alert("Quantidade de números ímpares: " + contador6);
+</script>
+
+<!-- Exercício 7 -->
+<script>
+const vetor7 = [];
+for (let i = 0; i < 10; i++) {
+  vetor7[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+const busca7 = Number(prompt("Digite o número que deseja buscar:"));
+const encontrado7 = vetor7.includes(busca7);
+console.log("Vetor:", vetor7);
+if (encontrado7) {
+  console.log(`${busca7} encontrado no vetor`);
+  alert(`${busca7} encontrado no vetor`);
+} else {
+  console.log(`${busca7} NÃO encontrado no vetor`);
+  alert(`${busca7} NÃO encontrado no vetor`);
+}
+</script>
+
+<!-- Exercício 8 -->
+<script>
+const nomes8 = [];
+const nomesComA = [];
+for (let i = 0; i < 5; i++) {
+  nomes8[i] = prompt(`Digite o nome ${i+1}:`);
+  if (nomes8[i].toUpperCase().startsWith('A')) nomesComA.push(nomes8[i]);
+}
+console.log("Nomes digitados:", nomes8);
+console.log("Nomes que começam com 'A':", nomesComA);
+alert("Nomes que começam com 'A': " + nomesComA.join(", "));
+</script>
+
+<!-- Exercício 9 -->
+<script>
+const vetor9 = [];
+for (let i = 0; i < 6; i++) {
+  vetor9[i] = Number(prompt(`Digite o número ${i+1}:`));
+}
+console.log("Vetor original:", vetor9);
+const invertido9 = [...vetor9].reverse();
+console.log("Vetor invertido:", invertido9);
+alert("Vetor invertido: " + invertido9.join(", "));
+</script>
+
+<!-- Exercício 10 -->
+<script>
+const notas10 = [];
+let aprovados10 = 0;
+for (let i = 0; i < 8; i++) {
+  notas10[i] = Number(prompt(`Digite a nota do aluno ${i+1}:`));
+  if (notas10[i] >= 7) aprovados10++;
+}
+console.log("Notas:", notas10);
+console.log("Número de alunos aprovados:", aprovados10);
+alert("Número de alunos aprovados: " + aprovados10);
+</script>
+
+</body>
+</html>

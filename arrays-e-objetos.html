@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios: Arrays e Objetos</title>
+</head>
+<body>
+    
+   <!-- Lista de Compras -->
+
+<script>
+const listaCompras = [];
+for(let i=0;i<5;i++){
+  const item = prompt(`Digite o item ${i+1} da lista:`);
+  if(item) listaCompras.push(item);
+}
+alert("Lista final: " + listaCompras.join(", ") + "\nTotal de itens: " + listaCompras.length);
+console.log("Lista final:", listaCompras);
+
+const removerItem = prompt("Digite o nome do item a remover:");
+const indexItem = listaCompras.indexOf(removerItem);
+if(indexItem !== -1){
+  listaCompras.splice(indexItem, 1);
+  alert("Lista atualizada: " + listaCompras.join(", "));
+  console.log("Lista atualizada:", listaCompras);
+}else{
+  alert("Item não encontrado!");
+}
+</script>
+
+<!-- Cadastro de Contato -->
+
+<script>
+let contato = {
+  nome: prompt("Digite o nome do contato:"),
+  telefone: prompt("Digite o telefone:"),
+  email: prompt("Digite o email:")
+};
+alert(`Contato:\nNome: ${contato.nome}\nTelefone: ${contato.telefone}\nEmail: ${contato.email}`);
+console.log("Contato:", contato);
+
+const atualizarCadastro = prompt("Deseja atualizar telefone ou email? (telefone/email/nenhum)").toLowerCase();
+if(atualizarCadastro === "telefone"){
+  contato.telefone = prompt("Digite o novo telefone:");
+}else if(atualizarCadastro === "email"){
+  contato.email = prompt("Digite o novo email:");
+}
+
+const limparCadastro = prompt("Deseja limpar o cadastro? (sim/não)").toLowerCase();
+if(limparCadastro === "sim"){
+  contato = {nome:"", telefone:"", email:""};
+}
+
+alert("Cadastro atualizado: " + JSON.stringify(contato));
+console.log("Cadastro atualizado:", contato);
+</script>
+
+<!-- Filtrar Adultos -->
+
+<script>
+const idades = [];
+for(let i=0;i<5;i++){
+  idades.push(Number(prompt(`Digite a idade ${i+1}:`)));
+}
+alert("Todas as idades: " + idades.join(", "));
+console.log("Todas as idades:", idades);
+
+const adultos = idades.filter(x => x >= 18);
+const menores = idades.filter(x => x < 18);
+alert(`Idades de adultos: ${adultos.join(", ")}\nAdultos: ${adultos.length}\nMenores: ${menores.length}`);
+console.log("Adultos:", adultos, "Menores:", menores);
+</script>
+
+<!-- Calculadora de Preço -->
+
+<script>
+const precos = [];
+for(let i=0;i<4;i++){
+  precos.push(Number(prompt(`Digite o preço ${i+1}:`)));
+}
+const somaTotal = precos.reduce((a,b)=>a+b,0);
+const media = somaTotal / precos.length;
+alert(`Soma total: ${somaTotal}\nMédia: ${media.toFixed(2)}`);
+console.log("Soma total:", somaTotal, "Média:", media);
+
+const maiorPreco = Math.max(...precos);
+precos.splice(precos.indexOf(maiorPreco),1);
+const novaMedia = precos.reduce((a,b)=>a+b,0)/precos.length;
+alert(`Maior preço removido. Nova média: ${novaMedia.toFixed(2)}`);
+console.log("Nova média após remover maior preço:", novaMedia);
+</script>
+
+<!-- Inventário Simples -->
+
+<script>
+let produto = {
+  nome: prompt("Digite o nome do produto:"),
+  quantidade: Number(prompt("Digite a quantidade:"))
+};
+alert(produto.quantidade>0 ? "Em estoque" : "Fora de estoque");
+console.log(produto);
+
+const opcaoProduto = prompt("Deseja 'repor' ou 'retirar' quantidade?");
+const valorProduto = Number(prompt("Quantidade:"));
+if(opcaoProduto === "repor") produto.quantidade += valorProduto;
+else if(opcaoProduto === "retirar") produto.quantidade -= valorProduto;
+alert("Novo estado do produto: " + JSON.stringify(produto));
+console.log("Novo estado:", produto);
+</script>
+
+<!-- Buscar Usuário -->
+
+<script>
+let usuarios = [
+  {nome:"Alice", email:"alice@email.com"},
+  {nome:"Bruno", email:"bruno@email.com"},
+  {nome:"Carla", email:"carla@email.com"}
+];
+const emailBusca = prompt("Digite o email do usuário a buscar:");
+const usuarioEncontrado = usuarios.find(u=>u.email===emailBusca);
+if(usuarioEncontrado){
+  alert("Usuário encontrado: " + usuarioEncontrado.nome);
+  const removerUsuario = prompt("Deseja remover este usuário? (sim/não)").toLowerCase();
+  if(removerUsuario==="sim"){
+    usuarios = usuarios.filter(u=>u.email!==emailBusca);
+    alert("Usuário removido. Lista atualizada: " + usuarios.map(u=>u.nome).join(", "));
+  }
+}else{
+  alert("Usuário não encontrado!");
+}
+console.log("Lista de usuários:", usuarios);
+</script>
+
+<!-- Marcar Tarefas -->
+
+<script>
+let tarefas = [];
+for(let i=0;i<3;i++){
+  tarefas.push({texto:prompt(`Digite a tarefa ${i+1}:`), feita:false});
+}
+alert("Tarefas:\n" + tarefas.map((t,i)=>`${i+1}- ${t.texto} [${t.feita?"Feita":"Não feita"}]`).join("\n"));
+console.log("Tarefas iniciais:", tarefas);
+
+const indiceFeita = Number(prompt("Qual tarefa deseja marcar como feita? (1-3)"))-1;
+if(tarefas[indiceFeita]) tarefas[indiceFeita].feita = true;
+
+const indiceRemover = Number(prompt("Qual tarefa deseja remover? (1-3)"))-1;
+if(tarefas[indiceRemover]) tarefas.splice(indiceRemover,1);
+
+alert("Tarefas atualizadas:\n" + tarefas.map((t,i)=>`${i+1}- ${t.texto} [${t.feita?"Feita":"Não feita"}]`).join("\n"));
+console.log("Tarefas atualizadas:", tarefas);
+alert("Tarefas concluídas: " + tarefas.filter(t=>t.feita).length);
+</script>
+
+<!-- Contagem por Categoria -->
+
+<script>
+const itens = [];
+for(let i=0;i<6;i++){
+  const nomeItem = prompt(`Digite o nome do item ${i+1}:`);
+  const categoriaItem = prompt("Digite a categoria:");
+  itens.push({nome:nomeItem,categoria:categoriaItem});
+}
+let contagem = {};
+itens.forEach(i=> contagem[i.categoria] = (contagem[i.categoria]||0)+1);
+alert("Contagem por categoria: " + JSON.stringify(contagem));
+console.log("Contagem:", contagem);
+
+const categoriaRemover = prompt("Digite a categoria a remover:");
+const itensAtualizados = itens.filter(i=>i.categoria!==categoriaRemover);
+contagem = {};
+itensAtualizados.forEach(i=> contagem[i.categoria] = (contagem[i.categoria]||0)+1);
+alert("Lista atualizada e contagem: " + JSON.stringify(contagem));
+console.log("Itens atualizados:", itensAtualizados, "Contagem:", contagem);
+</script>
+
+<!-- Ranking de Pontuação -->
+
+<script>
+let ranking = [];
+for(let i=0;i<4;i++){
+  const nomeRanking = prompt(`Digite o nome ${i+1}:`);
+  const pontosRanking = Number(prompt("Digite os pontos:"));
+  ranking.push({nome:nomeRanking,pontos:pontosRanking});
+}
+let maior = ranking.reduce((a,b)=>a.pontos>b.pontos?a:b);
+alert(`Maior pontuador: ${maior.nome} (${maior.pontos})`);
+console.log("Ranking inicial:", ranking);
+
+const atualizarRanking = prompt("Deseja atualizar a pontuação de alguém? (sim/não)").toLowerCase();
+if(atualizarRanking==="sim"){
+  const nomeAtualizar = prompt("Digite o nome:");
+  const novoPonto = Number(prompt("Digite a nova pontuação:"));
+  const usuario = ranking.find(u=>u.nome===nomeAtualizar);
+  if(usuario) usuario.pontos = novoPonto;
+  maior = ranking.reduce((a,b)=>a.pontos>b.pontos?a:b);
+  alert(`Novo maior pontuador: ${maior.nome} (${maior.pontos})`);
+}
+console.log("Ranking atualizado:", ranking);
+</script>
+
+<!-- Carrinho Simples -->
+ 
+<script>
+const carrinho = [];
+for(let i=0;i<5;i++){
+  const nomeProduto = prompt(`Digite o nome do produto ${i+1}:`);
+  if(!nomeProduto) break;
+  const precoProduto = Number(prompt("Digite o preço:"));
+  carrinho.push({nome:nomeProduto, preco:precoProduto});
+}
+const calcularTotal = carrinho => carrinho.reduce((soma,p)=>soma+p.preco,0);
+
+let total = calcularTotal(carrinho);
+let frete = total>100?0:10;
+alert(`Total: R$ ${total}\nFrete: R$ ${frete}`);
+console.log("Carrinho:", carrinho, "Total:", total, "Frete:", frete);
+
+const removerProduto = prompt("Deseja remover algum produto pelo nome? (sim/não)").toLowerCase();
+if(removerProduto==="sim"){
+  const nomeRemover = prompt("Digite o nome do produto:");
+  const carrinhoAtualizado = carrinho.filter(p=>p.nome!==nomeRemover);
+  total = calcularTotal(carrinhoAtualizado);
+  frete = total>100?0:10;
+  alert(`Novo total: R$ ${total}\nFrete: R$ ${frete}`);
+  console.log("Carrinho atualizado:", carrinhoAtualizado);
+}
+</script>
+
+</body>
+</html>
